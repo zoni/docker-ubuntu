@@ -8,4 +8,4 @@ fi
 TARGET_USER="$1"
 shift
 
-exec sudo --set-home --non-interactive --user "$TARGET_USER" -- "$@"
+exec sudo --preserve-env --set-home --non-interactive --user "$TARGET_USER" -- "$@"
